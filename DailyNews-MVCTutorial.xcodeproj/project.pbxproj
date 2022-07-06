@@ -16,6 +16,7 @@
 		D047341C28741C0100103825 /* DailyNews_MVCTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047341B28741C0100103825 /* DailyNews_MVCTutorialTests.swift */; };
 		D047342628741C0100103825 /* DailyNews_MVCTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047342528741C0100103825 /* DailyNews_MVCTutorialUITests.swift */; };
 		D047342828741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047342728741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift */; };
+		D047343828741D2200103825 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047343728741D2200103825 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D047342128741C0100103825 /* DailyNews-MVCTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DailyNews-MVCTutorialUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047342528741C0100103825 /* DailyNews_MVCTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNews_MVCTutorialUITests.swift; sourceTree = "<group>"; };
 		D047342728741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNews_MVCTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D047343728741D2200103825 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,11 @@
 		D047340328741C0000103825 /* DailyNews-MVCTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				D047343428741CEA00103825 /* Model */,
+				D047343528741CF000103825 /* View */,
+				D047343628741CF500103825 /* Controller */,
 				D047340428741C0000103825 /* AppDelegate.swift */,
 				D047340628741C0000103825 /* SceneDelegate.swift */,
-				D047340828741C0000103825 /* ViewController.swift */,
-				D047340A28741C0000103825 /* Main.storyboard */,
 				D047340D28741C0100103825 /* Assets.xcassets */,
 				D047340F28741C0100103825 /* LaunchScreen.storyboard */,
 				D047341228741C0100103825 /* Info.plist */,
@@ -125,6 +128,30 @@
 				D047342728741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift */,
 			);
 			path = "DailyNews-MVCTutorialUITests";
+			sourceTree = "<group>";
+		};
+		D047343428741CEA00103825 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D047343728741D2200103825 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D047343528741CF000103825 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D047340A28741C0000103825 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D047343628741CF500103825 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D047340828741C0000103825 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D047343828741D2200103825 /* Article.swift in Sources */,
 				D047340928741C0000103825 /* ViewController.swift in Sources */,
 				D047340528741C0000103825 /* AppDelegate.swift in Sources */,
 				D047340728741C0000103825 /* SceneDelegate.swift in Sources */,
