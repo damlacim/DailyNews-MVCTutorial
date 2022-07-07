@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Kingfisher
+import SafariServices
 
 class DetailViewController: UIViewController {
     public var articles: Article?
@@ -19,8 +21,22 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
 
     @IBAction func navigateButtonClicked(_ sender: UIButton) {
+        
+        guard let url = URL(string: articles!.url) else {
+            return
+        }
+        let viewController = SFSafariViewController(url: url)
+        present(viewController,animated: true)
+    }
+    
+    // MARK: Function
+    private func updateUI() {
+        publishedLabel.text = articles?.publishedAt
+        descriptionLabel.text = articles?.description
+        image.kf.setImage(with: URL(string: articles!.urlToImage))
     }
 }
