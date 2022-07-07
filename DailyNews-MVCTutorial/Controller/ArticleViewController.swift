@@ -32,12 +32,18 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableViewSetup()
+        setup()
+        
+        
+    }
+    private func setup() {
         subscribeViewModel()
         fetchData()
-        reloadTableView()
-        
+    }
+    private func tableViewSetup() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     // MARK: Functions
