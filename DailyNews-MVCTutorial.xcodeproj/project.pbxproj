@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D047340528741C0000103825 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047340428741C0000103825 /* AppDelegate.swift */; };
 		D047340728741C0000103825 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047340628741C0000103825 /* SceneDelegate.swift */; };
-		D047340928741C0000103825 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047340828741C0000103825 /* ViewController.swift */; };
+		D047340928741C0000103825 /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047340828741C0000103825 /* NewsListTableViewController.swift */; };
 		D047340C28741C0000103825 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D047340A28741C0000103825 /* Main.storyboard */; };
 		D047340E28741C0100103825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D047340D28741C0100103825 /* Assets.xcassets */; };
 		D047341128741C0100103825 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D047340F28741C0100103825 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		D047342628741C0100103825 /* DailyNews_MVCTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047342528741C0100103825 /* DailyNews_MVCTutorialUITests.swift */; };
 		D047342828741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047342728741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift */; };
 		D047343828741D2200103825 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047343728741D2200103825 /* Article.swift */; };
+		D047343A2876BB3D00103825 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04734392876BB3D00103825 /* ArticleTableViewCell.swift */; };
+		D047343D2876C0E100103825 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047343C2876C0E100103825 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,7 @@
 		D047340128741C0000103825 /* DailyNews-MVCTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DailyNews-MVCTutorial.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D047340428741C0000103825 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D047340628741C0000103825 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D047340828741C0000103825 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D047340828741C0000103825 /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
 		D047340B28741C0000103825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D047340D28741C0100103825 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D047341028741C0100103825 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		D047342528741C0100103825 /* DailyNews_MVCTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNews_MVCTutorialUITests.swift; sourceTree = "<group>"; };
 		D047342728741C0100103825 /* DailyNews_MVCTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNews_MVCTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D047343728741D2200103825 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		D04734392876BB3D00103825 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D047343C2876C0E100103825 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				D047343428741CEA00103825 /* Model */,
 				D047343528741CF000103825 /* View */,
 				D047343628741CF500103825 /* Controller */,
+				D047343B2876BF7E00103825 /* Service */,
 				D047340428741C0000103825 /* AppDelegate.swift */,
 				D047340628741C0000103825 /* SceneDelegate.swift */,
 				D047340D28741C0100103825 /* Assets.xcassets */,
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D047340A28741C0000103825 /* Main.storyboard */,
+				D04734392876BB3D00103825 /* ArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,9 +155,17 @@
 		D047343628741CF500103825 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D047340828741C0000103825 /* ViewController.swift */,
+				D047340828741C0000103825 /* NewsListTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D047343B2876BF7E00103825 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D047343C2876C0E100103825 /* WebService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D047343D2876C0E100103825 /* WebService.swift in Sources */,
+				D047343A2876BB3D00103825 /* ArticleTableViewCell.swift in Sources */,
 				D047343828741D2200103825 /* Article.swift in Sources */,
-				D047340928741C0000103825 /* ViewController.swift in Sources */,
+				D047340928741C0000103825 /* NewsListTableViewController.swift in Sources */,
 				D047340528741C0000103825 /* AppDelegate.swift in Sources */,
 				D047340728741C0000103825 /* SceneDelegate.swift in Sources */,
 			);
