@@ -107,7 +107,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="168" translatesAutoresizingMaskIntoConstraints="NO" id="Zod-Qw-D3L">
-                                <rect key="frame" x="20" y="496.5" width="374" height="219.5"/>
+                                <rect key="frame" x="20" y="496.5" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fmd-Zb-iaN">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -115,29 +115,33 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-Wu-7R9">
-                                        <rect key="frame" x="0.0" y="188.5" width="212" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Haberin devamı için tıklayın..."/>
-                                        <connections>
-                                            <action selector="navigateButtonClicked:" destination="qUy-nq-ozD" eventType="touchUpInside" id="7Aw-1f-fov"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkR-Wu-7R9">
+                                <rect key="frame" x="80" y="537" width="254" height="169"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Haberin devamı için tıklayın..."/>
+                                <connections>
+                                    <action selector="navigateButtonClicked:" destination="qUy-nq-ozD" eventType="touchUpInside" id="7Aw-1f-fov"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xF4-Nz-nKp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NHD-rJ-sfo" firstAttribute="top" secondItem="F2l-Hp-j4e" secondAttribute="bottom" constant="32" id="DC5-0o-HZ8"/>
                             <constraint firstItem="xF4-Nz-nKp" firstAttribute="trailing" secondItem="Zod-Qw-D3L" secondAttribute="trailing" constant="20" id="E7q-Pb-7C9"/>
+                            <constraint firstItem="XkR-Wu-7R9" firstAttribute="leading" secondItem="xF4-Nz-nKp" secondAttribute="leading" constant="80" id="Gz6-2Y-MhY"/>
                             <constraint firstItem="F2l-Hp-j4e" firstAttribute="leading" secondItem="xF4-Nz-nKp" secondAttribute="leading" constant="20" id="Ibu-o1-BoY"/>
                             <constraint firstItem="xF4-Nz-nKp" firstAttribute="trailing" secondItem="F2l-Hp-j4e" secondAttribute="trailing" id="NNE-uK-g0n"/>
+                            <constraint firstItem="xF4-Nz-nKp" firstAttribute="bottom" secondItem="XkR-Wu-7R9" secondAttribute="bottom" constant="156" id="OZQ-T3-pIg"/>
                             <constraint firstItem="Zod-Qw-D3L" firstAttribute="top" secondItem="NHD-rJ-sfo" secondAttribute="bottom" constant="25" id="Xng-FO-SgH"/>
                             <constraint firstItem="NHD-rJ-sfo" firstAttribute="leading" secondItem="xF4-Nz-nKp" secondAttribute="leading" constant="5" id="be4-BV-RF1"/>
                             <constraint firstItem="F2l-Hp-j4e" firstAttribute="top" secondItem="xF4-Nz-nKp" secondAttribute="top" constant="10" id="jnC-aS-Yd4"/>
+                            <constraint firstItem="XkR-Wu-7R9" firstAttribute="top" secondItem="Zod-Qw-D3L" secondAttribute="bottom" constant="20" id="kdS-27-Dyp"/>
                             <constraint firstItem="xF4-Nz-nKp" firstAttribute="trailing" secondItem="NHD-rJ-sfo" secondAttribute="trailing" constant="5" id="lFw-fh-1e9"/>
                             <constraint firstItem="Zod-Qw-D3L" firstAttribute="leading" secondItem="xF4-Nz-nKp" secondAttribute="leading" constant="20" id="vcK-K6-bcW"/>
+                            <constraint firstItem="xF4-Nz-nKp" firstAttribute="trailing" secondItem="XkR-Wu-7R9" secondAttribute="trailing" constant="80" id="yWB-Z7-FGP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="enW-Lr-HsN"/>
@@ -151,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhO-bd-MYT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="98"/>
+            <point key="canvasLocation" x="1850.7246376811595" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Uk-Gs-vA4">
