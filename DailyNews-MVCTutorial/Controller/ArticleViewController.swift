@@ -119,22 +119,20 @@ extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-  /*  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectIndex = indexPath.row
         print(selectIndex)
         performSegue(withIdentifier: "detail", sender: self)
-    }*/
+    }
     
-  /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailViewController = segue.destination as? DetailViewController {
             let articleVM = self.articleIndex(selectIndex)
             detailViewController.articles = articleVM
             print(articleVM)
         }
-    }*/
-    
-    
+    }
 }
 
 
