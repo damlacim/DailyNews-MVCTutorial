@@ -8,6 +8,7 @@
 import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
+    // MARK: IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     

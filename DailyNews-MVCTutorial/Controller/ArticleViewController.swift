@@ -19,6 +19,8 @@ protocol ArticleViewControllerDelagate: AnyObject {
 }
 
 class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
+    
+    // MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Delegate
@@ -34,9 +36,9 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
         super.viewDidLoad()
         tableViewSetup()
         setup()
-        
-        
     }
+    
+    // MARK: Setup functions
     private func setup() {
         subscribeViewModel()
         fetchData()
@@ -78,7 +80,6 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
         }
     }
     
-    // MARK: Function
     func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -86,11 +87,14 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
     }
 }
 
+// MARK: Extensions
 extension ArticleViewController {
+    // MARK: Variables
     var numberOfSections: Int {
         return 1
     }
     
+    // MARK: Functions
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.articles?.count ?? 0
     }
@@ -105,6 +109,7 @@ extension ArticleViewController {
 
 extension ArticleViewController: UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.numberOfRowsInSection(section)
     }
