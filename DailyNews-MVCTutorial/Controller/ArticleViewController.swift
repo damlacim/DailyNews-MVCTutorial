@@ -7,28 +7,14 @@
 
 import UIKit
 
-// MARK: Enum
-enum ViewState {
-    case loading
-    case done
-}
 
-// MARK: Protocol
-protocol ArticleViewControllerDelagate: AnyObject {
-    func reloadTableView()
-}
-
-class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
+class ArticleViewController: UIViewController {
     
     // MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: Delegate
-    weak var delegate: ArticleViewControllerDelagate?
-    
     // MARK: Private variables
     private var articles: [Article]?
-    private var viewStateBlock: ((ViewState) -> Void)?
     private var selectIndex = 0
     
     // MARK: Life cycle
@@ -40,7 +26,6 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
     
     // MARK: Setup functions
     private func setup() {
-        subscribeViewModel()
         fetchData()
     }
     private func tableViewSetup() {
@@ -49,34 +34,17 @@ class ArticleViewController: UIViewController, ArticleViewControllerDelagate {
     }
     
     // MARK: Functions
-    func listenViewModel(with completion: @escaping (ViewState) -> Void) {
-        viewStateBlock = completion
-    }
-    
-    private func subscribeViewModel() {
-        listenViewModel { [weak self] state in
-            switch state {
-            case .loading:
-                print("loading")
-            case .done:
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
-            }
-        }
-    }
-    
+
     private func fetchData() {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else {
             return
         }
-        self.viewStateBlock?(.loading)
-        WebService().getArticles(url: url) { articles in
+        WebService().getArticles(url: url) { [self] articles in
             if let articles = articles {
                 self.articles = articles
                 print(articles)
+                self.reloadTableView()
             }
-            self.viewStateBlock?(.done)
         }
     }
     
