@@ -30,7 +30,6 @@ class DetailViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func navigateButtonClicked(_ sender: UIButton) {
-        
         guard let url = URL(string: articles!.url) else {
             return
         }

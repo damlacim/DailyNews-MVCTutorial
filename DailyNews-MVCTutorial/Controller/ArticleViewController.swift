@@ -20,12 +20,12 @@ class ArticleViewController: UIViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewSetup()
         setup()
     }
     
     // MARK: Setup functions
     private func setup() {
+        tableViewSetup()
         fetchData()
     }
     private func tableViewSetup() {
@@ -34,7 +34,6 @@ class ArticleViewController: UIViewController {
     }
     
     // MARK: Functions
-
     private func fetchData() {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else {
             return
