@@ -56,11 +56,7 @@ class ArticleViewController: UIViewController {
 
 // MARK: Extensions
 extension ArticleViewController {
-    // MARK: Variables
-    var numberOfSections: Int {
-        return 1
-    }
-    
+ 
     // MARK: Functions
     func numberOfRowsInSection(_ section: Int) -> Int {
         return self.articles?.count ?? 0
