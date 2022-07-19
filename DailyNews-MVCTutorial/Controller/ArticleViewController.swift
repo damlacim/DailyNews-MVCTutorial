@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ArticleViewController: UIViewController {
     
     // MARK: IBOutlet
