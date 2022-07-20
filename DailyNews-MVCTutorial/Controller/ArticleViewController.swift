@@ -37,11 +37,11 @@ class ArticleViewController: UIViewController {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else {
             return
         }
-        WebService().getArticles(url: url) { [self] articles in
+        WebService().getArticles(url: url) { [weak self] articles in
             if let articles = articles {
-                self.articles = articles
+                self?.articles = articles
                 print(articles)
-                self.reloadTableView()
+                self?.reloadTableView()
             }
         }
     }
