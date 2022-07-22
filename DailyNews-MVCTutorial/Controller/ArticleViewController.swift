@@ -24,10 +24,10 @@ class ArticleViewController: UIViewController {
     
     // MARK: Setup functions
     private func setup() {
-        tableViewSetup()
+        setupTableView()
         fetchData()
     }
-    private func tableViewSetup() {
+    private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
     }
