@@ -37,6 +37,7 @@ class ArticleViewController: UIViewController {
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=tr&apiKey=8b4b61575b454d3595702ea4ca663c08") else {
             return
         }
+        self.alert()
         WebService().getArticles(url: url) { [weak self] articles in
             if let articles = articles {
                 self?.articles = articles
@@ -44,6 +45,13 @@ class ArticleViewController: UIViewController {
                 self?.reloadTableView()
             }
         }
+    }
+    
+    private func alert() {
+        let alertController = UIAlertController(title: "Warning!", message: "No response from API. The news is loading.", preferredStyle: .alert)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(actionCancel)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func reloadTableView() {
